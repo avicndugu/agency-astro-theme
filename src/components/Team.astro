@@ -1,4 +1,38 @@
-<!-- Team-->
+---
+const teamData = [
+  {
+    name: "Parveen Anand",
+    role: "Lead Designer",
+    image: {
+      link: "assets/img/team/1.jpg",
+    },
+    twitter: "#!",
+    facebook: "#!",
+    linkedin: "#!",
+  },
+  {
+    name: "Diana Petersen",
+    role: "Lead Marketer",
+    image: {
+      link: "assets/img/team/2.jpg",
+    },
+    twitter: "#!",
+    facebook: "#!",
+    linkedin: "#!",
+  },
+  {
+    name: "Larry Parker",
+    role: "Lead Developer",
+    image: {
+      link: "assets/img/team/3.jpg",
+    },
+    twitter: "#!",
+    facebook: "#!",
+    linkedin: "#!",
+  },
+];
+---
+
 <section class="page-section bg-light" id="team">
   <div class="container">
     <div class="text-center">
@@ -8,93 +42,42 @@
       </h3>
     </div>
     <div class="row">
-      <div class="col-lg-4">
-        <div class="team-member">
-          <img
-            class="mx-auto rounded-circle"
-            src="assets/img/team/1.jpg"
-            alt="..."
-          />
-          <h4>Parveen Anand</h4>
-          <p class="text-muted">Lead Designer</p>
-          <a
-            class="btn btn-dark btn-social mx-2"
-            href="#!"
-            aria-label="Parveen Anand Twitter Profile"
-            ><i class="fab fa-twitter"></i></a
-          >
-          <a
-            class="btn btn-dark btn-social mx-2"
-            href="#!"
-            aria-label="Parveen Anand Facebook Profile"
-            ><i class="fab fa-facebook-f"></i></a
-          >
-          <a
-            class="btn btn-dark btn-social mx-2"
-            href="#!"
-            aria-label="Parveen Anand LinkedIn Profile"
-            ><i class="fab fa-linkedin-in"></i></a
-          >
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="team-member">
-          <img
-            class="mx-auto rounded-circle"
-            src="assets/img/team/2.jpg"
-            alt="..."
-          />
-          <h4>Diana Petersen</h4>
-          <p class="text-muted">Lead Marketer</p>
-          <a
-            class="btn btn-dark btn-social mx-2"
-            href="#!"
-            aria-label="Diana Petersen Twitter Profile"
-            ><i class="fab fa-twitter"></i></a
-          >
-          <a
-            class="btn btn-dark btn-social mx-2"
-            href="#!"
-            aria-label="Diana Petersen Facebook Profile"
-            ><i class="fab fa-facebook-f"></i></a
-          >
-          <a
-            class="btn btn-dark btn-social mx-2"
-            href="#!"
-            aria-label="Diana Petersen LinkedIn Profile"
-            ><i class="fab fa-linkedin-in"></i></a
-          >
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="team-member">
-          <img
-            class="mx-auto rounded-circle"
-            src="assets/img/team/3.jpg"
-            alt="..."
-          />
-          <h4>Larry Parker</h4>
-          <p class="text-muted">Lead Developer</p>
-          <a
-            class="btn btn-dark btn-social mx-2"
-            href="#!"
-            aria-label="Larry Parker Twitter Profile"
-            ><i class="fab fa-twitter"></i></a
-          >
-          <a
-            class="btn btn-dark btn-social mx-2"
-            href="#!"
-            aria-label="Larry Parker Facebook Profile"
-            ><i class="fab fa-facebook-f"></i></a
-          >
-          <a
-            class="btn btn-dark btn-social mx-2"
-            href="#!"
-            aria-label="Larry Parker LinkedIn Profile"
-            ><i class="fab fa-linkedin-in"></i></a
-          >
-        </div>
-      </div>
+      {
+        teamData.map((member) => (
+          <div class="col-lg-4">
+            <div class="team-member">
+              <img
+                class="mx-auto rounded-circle"
+                src={member.image.link}
+                alt={`${member.name} photo`}
+              />
+              <h4>{member.name}</h4>
+              <p class="text-muted">{member.role}</p>
+              <a
+                class="btn btn-dark btn-social mx-2"
+                href={member.twitter}
+                aria-label={`${member.name} Twitter Profile`}
+              >
+                <i class="fab fa-twitter" />
+              </a>
+              <a
+                class="btn btn-dark btn-social mx-2"
+                href={member.facebook}
+                aria-label={`${member.name} Facebook Profile`}
+              >
+                <i class="fab fa-facebook-f" />
+              </a>
+              <a
+                class="btn btn-dark btn-social mx-2"
+                href={member.linkedin}
+                aria-label={`${member.name} LinkedIn Profile`}
+              >
+                <i class="fab fa-linkedin-in" />
+              </a>
+            </div>
+          </div>
+        ))
+      }
     </div>
     <div class="row">
       <div class="col-lg-8 mx-auto text-center">
