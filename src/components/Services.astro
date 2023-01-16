@@ -1,0 +1,47 @@
+---
+const servicesData = [
+  {
+    title: "E-Commerce",
+    body: "Lorem ipsum 1 dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.",
+    icon: "fa-shopping-cart",
+  },
+  {
+    title: "Responsive Design",
+    body: "Lorem ipsum 2 dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.",
+    icon: "fa-laptop",
+  },
+  {
+    title: "Web Security",
+    body: "Lorem ipsum 3 dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.",
+    icon: "fa-lock",
+  },
+];
+---
+
+<!-- Services-->
+<section class="page-section" id="services">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">Services</h2>
+      <h3 class="section-subheading text-muted">
+        Lorem ipsum dolor sit amet consectetur.
+      </h3>
+    </div>
+    <div class="row text-center">
+      {
+        servicesData.map((feature) => (
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fas fa-circle fa-stack-2x text-primary" />
+              <i
+                class:list={["fas fa-stack-1x fa-inverse", `${feature.icon}`]}
+              />
+            </span>
+            <h4 class="my-3">{feature.title}</h4>
+            <p class="text-muted">{feature.body}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
