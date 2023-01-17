@@ -1,0 +1,24 @@
+---
+const pageDetails = {
+  heading: "Welcome To Our Studio Title",
+};
+
+const { title } = Astro.props;
+const { heroImage } = Astro.props;
+const headerImagePath = `url(../assets/img/blog/${heroImage})`;
+---
+
+<!-- Masthead-->
+<header class="masthead">
+  <div class="container">
+    <div class="masthead-heading text-uppercase">
+      <h1>{title}</h1>
+    </div>
+  </div>
+</header>
+
+<style define:vars={{ headerImagePath }}>
+  header.masthead {
+    background-image: var(--headerImagePath);
+  }
+</style>
