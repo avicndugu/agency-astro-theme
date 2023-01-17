@@ -1,4 +1,8 @@
 ---
+const portfolioDetails = {
+  heading: "Portfolio",
+  body: "Lorem portfolio ipsum dolor sit amet consectetur.",
+};
 const portfolioData = [
   {
     title: "Threads",
@@ -7,7 +11,7 @@ const portfolioData = [
       link: "assets/img/portfolio/1.jpg",
       alt: "...",
     },
-    modalLink: "#portfolioModal1"
+    modalLink: "#portfolioModal1",
   },
   {
     title: "Explore",
@@ -16,7 +20,7 @@ const portfolioData = [
       link: "assets/img/portfolio/2.jpg",
       alt: "...",
     },
-    modalLink: "#portfolioModal2"
+    modalLink: "#portfolioModal2",
   },
   {
     title: "Finish",
@@ -25,7 +29,7 @@ const portfolioData = [
       link: "assets/img/portfolio/3.jpg",
       alt: "...",
     },
-    modalLink: "#portfolioModal3"
+    modalLink: "#portfolioModal3",
   },
   {
     title: "Lines",
@@ -34,7 +38,7 @@ const portfolioData = [
       link: "assets/img/portfolio/4.jpg",
       alt: "...",
     },
-    modalLink: "#portfolioModal4"
+    modalLink: "#portfolioModal4",
   },
   {
     title: "Southwest",
@@ -43,7 +47,7 @@ const portfolioData = [
       link: "assets/img/portfolio/5.jpg",
       alt: "...",
     },
-    modalLink: "#portfolioModal5"
+    modalLink: "#portfolioModal5",
   },
   {
     title: "Window",
@@ -52,46 +56,51 @@ const portfolioData = [
       link: "assets/img/portfolio/6.jpg",
       alt: "...",
     },
-    modalLink: "#portfolioModal6"
+    modalLink: "#portfolioModal6",
   },
 ];
 ---
 
-<!-- Portfolio Grid-->
 <section class="page-section bg-light" id="portfolio">
   <div class="container">
     <div class="text-center">
-      <h2 class="section-heading text-uppercase">Portfolio</h2>
+      <h2 class="section-heading text-uppercase">{portfolioDetails.heading}</h2>
       <h3 class="section-subheading text-muted">
-        Lorem ipsum dolor sit amet consectetur.
+        {portfolioDetails.body}
       </h3>
     </div>
     <div class="row">
-        {portfolioData.map(item => (
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <!-- Portfolio item -->
-                <div class="portfolio-item">
-                    <a
-                        class="portfolio-link"
-                        data-bs-toggle="modal"
-                        href={item.modalLink}
-                    >
-                    <div class="portfolio-hover">
-                    <div class="portfolio-hover-content">
-                        <i class="fas fa-plus fa-3x"></i>
-                    </div>
-                    </div>
-                    <img class="img-fluid" src={item.image.link} alt={item.image.link} />
-                    </a>
-                    <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading">{item.title}</div>
-                        <div class="portfolio-caption-subheading text-muted">
-                        {item.subtitle}
-                        </div>
-                    </div>
+      {
+        portfolioData.map((item) => (
+          <div class="col-lg-4 col-sm-6 mb-4">
+            {/* Portfolio item */}
+            <div class="portfolio-item">
+              <a
+                class="portfolio-link"
+                data-bs-toggle="modal"
+                href={item.modalLink}
+              >
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content">
+                    <i class="fas fa-plus fa-3x" />
+                  </div>
                 </div>
+                <img
+                  class="img-fluid"
+                  src={item.image.link}
+                  alt={item.image.link}
+                />
+              </a>
+              <div class="portfolio-caption">
+                <div class="portfolio-caption-heading">{item.title}</div>
+                <div class="portfolio-caption-subheading text-muted">
+                  {item.subtitle}
+                </div>
+              </div>
             </div>
-        ))}
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>

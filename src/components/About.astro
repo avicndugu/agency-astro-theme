@@ -1,4 +1,8 @@
 ---
+const aboutDetails = {
+  heading: "About",
+  body: "Lorem about ipsum dolor sit amet consectetur.",
+};
 const aboutData = [
   {
     title: "2009-2011",
@@ -42,9 +46,9 @@ const aboutData = [
 <section class="page-section" id="about">
   <div class="container">
     <div class="text-center">
-      <h2 class="section-heading text-uppercase">About</h2>
+      <h2 class="section-heading text-uppercase">{aboutDetails.heading}</h2>
       <h3 class="section-subheading text-muted">
-        Lorem ipsum dolor sit amet consectetur.
+        {aboutDetails.body}
       </h3>
     </div>
     <ul class="timeline">

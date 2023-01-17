@@ -1,5 +1,27 @@
 ---
 import logo from "../img/navbar-logo.svg";
+const navData = [
+  {
+    name: "Services",
+    url: "#services",
+  },
+  {
+    name: "Portfolio",
+    url: "#portfolio",
+  },
+  {
+    name: "About",
+    url: "#about",
+  },
+  {
+    name: "Team",
+    url: "#team",
+  },
+  {
+    name: "Contact",
+    url: "#contact",
+  },
+];
 ---
 
 <!-- Navigation-->
@@ -20,17 +42,15 @@ import logo from "../img/navbar-logo.svg";
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#services">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#portfolio">Portfolio</a>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
+        {
+          navData.map((item) => (
+            <li class="nav-item">
+              <a class="nav-link" href={item.url}>
+                {item.name}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </div>
   </div>
