@@ -1,0 +1,14 @@
+---
+import Default from "./Default.astro";
+import Masthead from "../components/Masthead.astro";
+const { title } = Astro.props;
+---
+
+<Default>
+  <Masthead />
+  <section class="py-4">
+    <div class="container">
+      <slot />
+    </div>
+  </section>
+</Default>
