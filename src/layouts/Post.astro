@@ -1,0 +1,14 @@
+---
+import Default from "./Default.astro";
+import HeroSection from "../components/HeroSection.astro";
+const { frontmatter } = Astro.props;
+---
+
+<Default title={`${frontmatter.title} - StartBootstrap`}>
+  <HeroSection title={frontmatter.title} heroImage={frontmatter.heroImage} />
+  <section class="py-4">
+    <div class="container">
+      <slot />
+    </div>
+  </section>
+</Default>
