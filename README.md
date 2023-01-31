@@ -1,30 +1,57 @@
-# Astro Starter Kit: Minimal
+# Agency Astro Theme
+
+Agency is an Astro theme for a Company or business or Agency marketing websites. You get a landing page that you can use to showcase everything about your company. You can easily create additional pages in markdown using the generic page layout.
+
+[Demo Preview](https://astro.devpractical.com)
+
+## Usage
+
+1. Clone the project locally:
 
 ```
-npm create astro@latest -- --template minimal
+git clone
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/s/github/withastro/astro/tree/latest/examples/minimal)
+2. Enter your project directory:
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+```
+cd agency-astro-theme
+```
+
+3. Install project dependencies.
+
+```
+npm install
+```
+
+4. Run project locally.
+
+```
+npm run dev
+```
+
+Open your browser and visit the link provided in your terminal. Most times it is usually:
+
+```
+http://localhost:3000
+```
 
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
 
 ```
+
 /
 ├── public/
 ├── src/
-│   └── pages/
-│       └── index.astro
+│ └── pages/
+│ └── index.astro
 └── package.json
+
 ```
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
 Any static assets, like images, can be placed in the `public/` directory.
 
@@ -40,7 +67,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`      | Preview your build locally, before deploying     |
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
