@@ -1,6 +1,6 @@
 ---
-title: "Your First Example Blog Post"
-layout: "../layouts/Post.astro"
+title: "Your 2nd Example Blog Post"
+layout: "../../layouts/Post.astro"
 heroImage: "blog-image-1.jpg"
 ---
 

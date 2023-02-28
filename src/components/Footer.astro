@@ -2,17 +2,17 @@
 const footerSocial = [
   {
     title: "Twitter",
-    link: "#!",
+    link: "https://twitter.com",
     icon: "fa-twitter",
   },
   {
     title: "Facebook",
-    link: "#!",
+    link: "https://facebook.com",
     icon: "fa-facebook-f",
   },
   {
     title: "LinkedIn",
-    link: "#!",
+    link: "https://linkedin.com",
     icon: "fa-linkedin-in",
   },
 ];
@@ -30,7 +30,7 @@ const footerSocial = [
           footerSocial.map((item) => (
             <a
               class="btn btn-dark btn-social mx-2"
-              href="#!"
+              href={item.link}
               aria-label={item.title}
             >
               <i class:list={["fab", `${item.icon}`]} />
@@ -39,10 +39,11 @@ const footerSocial = [
         }
       </div>
       <div class="col-lg-4 text-lg-end">
-        <a class="link-dark text-decoration-none me-3" href="#!"
+        <a class="link-dark text-decoration-none me-3" href="/privacy/"
           >Privacy Policy</a
         >
-        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+        <a class="link-dark text-decoration-none" href="/terms/">Terms of Use</a
+        >
       </div>
     </div>
   </div>

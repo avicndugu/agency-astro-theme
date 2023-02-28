@@ -1,0 +1,23 @@
+---
+const posts = await Astro.glob("./*.md");
+import Page from "../../layouts/Page.astro";
+const title = "Blog Page";
+const heroImage = "blog-image-1.jpg";
+---
+
+<Page title={title} heroImage={heroImage}>
+  <p>Welcome to the blog page</p>
+  <p>
+    You can visit an
+    <a href="/blog/blog-post-1/"> example blog post written in markdown</a>
+  </p>
+  <div class="posts">
+    {
+      posts.map((post) => (
+        <article class="post">
+          <h2>{post.frontmatter.title}</h2>
+        </article>
+      ))
+    }
+  </div>
+</Page>
